@@ -10,7 +10,7 @@
 This Spring cloud config server can work (in our case) a bit like a proxy server between your app and one or more git repo's.  
 The configuration (src/main/resources/application.yml) has 2 important properties:  
 
-* spring.cloud.config.server.gituri: git@github.com:metskem/configrepo-{application}.git  # this does not work on cf, it tries but fails ssh because of com.jcraft.jsch.JSchException: UnknownHostKey
+* spring.cloud.config.server.gituri: git@github.com:metskem/{application}-config.git  # git protocol does not work on cf, it tries but fails ssh because of com.jcraft.jsch.JSchException: UnknownHostKey, so use the https url for git
 * spring.cloud.config.server.searchPaths: '{profile}'
 
 The configserver makes a git clone from the above specified repo. The "{application}" part is a variable that is resolved before constructing the git url.  
