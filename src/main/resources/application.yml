@@ -7,8 +7,11 @@ spring:
 #          uri: git@github.com:metskem/{application}-config.git  # this does not work on cf, it tries but fails ssh because of com.jcraft.jsch.JSchException: UnknownHostKey
           uri: https://github.com/RabobankOnline/calculator-config.git  # this does not work on cf, it tries but fails ssh because of com.jcraft.jsch.JSchException: UnknownHostKey
 #          searchPaths: '{profile}'  # make sure you set your profile on the cmdline (not in application.properties), with "--spring.profiles.active=testprofile"
-          username: calculator-user
-          password: calculator-password
+#          username: calculator-user
+#          password: calculator-password
+security:
+  user:
+    password: calculator-password
 server:
   # port: 8888
   tomcat:
@@ -20,4 +23,4 @@ server:
 
 logging:
   level:
-    org.springframework.cloud: 'DEBUG'
+    org.springframework.cloud: 'INFO'
