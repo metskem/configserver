@@ -11,6 +11,13 @@
     <name>configserver</name>
     <description>ConfigServer for Spring Boot</description>
 
+    <scm>
+        <developerConnection>scm:git:https://github.com/metskem/configserver.git</developerConnection>
+        <connection>scm:git:https://github.com/metskem/configserver.git</connection>
+        <url>https://github.com/metskem/configserver.git</url>
+        <tag>configserver</tag>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
