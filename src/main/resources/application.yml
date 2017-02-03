@@ -4,7 +4,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/RabobankOnline/{application}-config.git  # this does not work on cf, it tries but fails ssh because of com.jcraft.jsch.JSchException: UnknownHostKey
+          uri: https://github.com/metskem/{application}-config.git  # this does not work on cf, it tries but fails ssh because of com.jcraft.jsch.JSchException: UnknownHostKey
           searchPaths: '{profile}'  # make sure you set your profile on the cmdline (not in application.properties), with "--spring.profiles.active=testprofile"
 server:
   tomcat:
